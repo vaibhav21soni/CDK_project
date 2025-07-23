@@ -1,6 +1,7 @@
 {
-  "name": "cdk",
-  "version": "0.1.0",
+  "name": "aws-cdk-web-server",
+  "version": "1.0.0",
+  "description": "AWS CDK project for deploying a secure web server infrastructure",
   "bin": {
     "cdk": "bin/cdk.js"
   },
@@ -8,19 +9,44 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "./deploy.sh",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy",
+    "bootstrap": "cdk bootstrap",
+    "lint": "eslint . --ext .ts",
+    "clean": "rm -rf cdk.out node_modules",
+    "update-deps": "npm update"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "22.7.9",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5",
     "aws-cdk": "2.1020.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.3"
   },
   "dependencies": {
     "aws-cdk-lib": "2.202.0",
     "constructs": "^10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaibhav21soni/CDK_project.git"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "infrastructure",
+    "web-server",
+    "ec2",
+    "vpc"
+  ],
+  "author": "Vaibhav soni",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
